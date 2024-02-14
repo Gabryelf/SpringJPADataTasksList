@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<h1>Список задач</h1>
+
+<table class="task-table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Created Date</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    <table>
+        <tbody>
+        <tr th:each="task : ${tasks}">
+            <td th:text="${task.id}"></td>
+            <td th:text="${task.description}"></td>
+            <td th:text="${task.status}"></td>
+            <td th:text="${task.createdDate}"></td>
+        </tr>
+        </tbody>
+    </table>
+    </thead>
+
+</table>
+
+<form method="post" action="/tasks" class="task-form">
+    <label for="description">Описание:</label>
+    <input type="text" id="description" name="description" required>
+    <label for="status">Статус задачи:</label>
+    <select id="status" name="status" required>
+        <option value="NOT_STARTED">Не начата</option>
+        <option value="IN_PROGRESS">В процессе</option>
+        <option value="COMPLETED">Завершена</option>
+    </select>
+    <button type="submit">Добавить задачу</button>
+</form>
+</body>
+</html>
+
+
+
+

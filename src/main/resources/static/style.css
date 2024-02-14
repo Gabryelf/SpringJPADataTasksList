@@ -1,0 +1,62 @@
+body {
+    background-color: #f0f0f0; /* Светло-серый фон */
+    font-family: Arial, sans-serif;
+}
+
+.task-table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.task-table th, .task-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.task-table th {
+    background-color: #4CAF50; /* Зеленый цвет для заголовков таблицы */
+    color: white;
+}
+
+.task-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Светло-серый цвет для четных строк */
+}
+
+.task-table tr:hover {
+    background-color: #ddd; /* Светло-серый цвет при наведении */
+}
+
+.task-table .completed {
+    background-color: #FF69B4; /* Розовый цвет для выполненных задач */
+}
+
+.task-table .in-progress {
+    background-color: #FFFF00; /* Желтый цвет для задач в процессе */
+}
+
+.task-table .not-started {
+    background-color: #FFA500; /* Оранжевый цвет для не начатых задач */
+}
+
+.task-form {
+    margin-top: 20px;
+}
+
+.task-form label, .task-form select, .task-form input, .task-form button {
+    margin: 5px;
+}
+
+.task-form button {
+    background-color: #FFA500; /* Оранжевый цвет для кнопок формы */
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-form button:hover {
+    background-color: #FFD700; /* Желтый цвет при наведении на кнопку */
+}
